@@ -25,7 +25,7 @@ Bu basit dosya yönetim aracı, Windows işletim sistemi üzerinde çalışan bi
 
 1. Bu depoyu bilgisayarınıza klonlayın.
    ```bash
-   git clone https://github.com/kullaniciadi/dosya-yonetim-araci.git
+   git clone https://github.com/Emirkksl/cpp-yonetim-arac-
 
 
 
