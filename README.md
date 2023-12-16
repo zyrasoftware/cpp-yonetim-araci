@@ -18,6 +18,7 @@ Bu basit dosya yönetim aracı, Windows işletim sistemi üzerinde çalışan bi
 ## Gereksinimler
 
 - Windows işletim sistemi
+- .NET Framework yüklü olmalıdır
 
 
 ## Kurulum
