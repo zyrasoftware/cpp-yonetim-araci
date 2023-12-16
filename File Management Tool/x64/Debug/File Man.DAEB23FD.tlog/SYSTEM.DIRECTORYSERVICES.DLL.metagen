@@ -1,0 +1,2149 @@
+  System.DirectoryServices.resources - Embedded, ContainedInManifestFile, 
+  System.DirectoryServices.DirectoryEntry.bmp - Embedded, ContainedInManifestFile, 
+  System.DirectoryServices.DirectorySearcher.bmp - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Struct System.DirectoryServices.ActiveDirectoryRights: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectoryRights Delete = 65536 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights ReadControl = 131072 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights WriteDacl = 262144 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights WriteOwner = 524288 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights Synchronize = 1048576 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights AccessSystemSecurity = 16777216 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights GenericRead = 131220 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights GenericWrite = 131112 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights GenericExecute = 131076 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights GenericAll = 983551 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights CreateChild = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights DeleteChild = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights ListChildren = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights Self = 8 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights ReadProperty = 16 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights WriteProperty = 32 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights DeleteTree = 64 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights ListObject = 128 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectoryRights ExtendedRight = 256 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectorySecurityInheritance: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectorySecurityInheritance None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectorySecurityInheritance All = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectorySecurityInheritance Descendents = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectorySecurityInheritance SelfAndChildren = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectorySecurityInheritance Children = 4 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.PropertyAccess: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.PropertyAccess Read = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.PropertyAccess Write = 1 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectorySecurity: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Security.AccessControl.DirectoryObjectSecurity
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Type AccessRightType 'get ' : 
+    System.Type AccessRuleType 'get ' : 
+    System.Type AuditRuleType 'get ' : 
+  Methods:
+    AddAccessRule(ActiveDirectoryAccessRule): PrivateScope, Public, HideBySig
+    SetAccessRule(ActiveDirectoryAccessRule): PrivateScope, Public, HideBySig
+    ResetAccessRule(ActiveDirectoryAccessRule): PrivateScope, Public, HideBySig
+    RemoveAccess(IdentityReference, AccessControlType): PrivateScope, Public, HideBySig
+    RemoveAccessRule(ActiveDirectoryAccessRule): PrivateScope, Public, HideBySig
+    RemoveAccessRuleSpecific(ActiveDirectoryAccessRule): PrivateScope, Public, HideBySig
+    ModifyAccessRule(AccessControlModification, AccessRule, Boolean&(Out)): PrivateScope, Public, Virtual, HideBySig
+    PurgeAccessRules(IdentityReference): PrivateScope, Public, Virtual, HideBySig
+    AddAuditRule(ActiveDirectoryAuditRule): PrivateScope, Public, HideBySig
+    SetAuditRule(ActiveDirectoryAuditRule): PrivateScope, Public, HideBySig
+    RemoveAudit(IdentityReference): PrivateScope, Public, HideBySig
+    RemoveAuditRule(ActiveDirectoryAuditRule): PrivateScope, Public, HideBySig
+    RemoveAuditRuleSpecific(ActiveDirectoryAuditRule): PrivateScope, Public, HideBySig
+    ModifyAuditRule(AccessControlModification, AuditRule, Boolean&(Out)): PrivateScope, Public, Virtual, HideBySig
+    PurgeAuditRules(IdentityReference): PrivateScope, Public, Virtual, HideBySig
+    AccessRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AccessControlType): PrivateScope, Public, Final, Virtual, HideBySig
+    AccessRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AccessControlType, Guid, Guid): PrivateScope, Public, Final, Virtual, HideBySig
+    AuditRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AuditFlags): PrivateScope, Public, Final, Virtual, HideBySig
+    AuditRuleFactory(IdentityReference, Int32, Boolean, InheritanceFlags, PropagationFlags, AuditFlags, Guid, Guid): PrivateScope, Public, Final, Virtual, HideBySig
+    get_AccessRightType(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_AccessRuleType(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_AuditRuleType(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectoryAccessRule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Security.AccessControl.ObjectAccessRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AccessControlType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AccessControlType, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AccessControlType, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AccessControlType, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DirectoryServices.ActiveDirectoryRights ActiveDirectoryRights 'get ' : 
+    System.DirectoryServices.ActiveDirectorySecurityInheritance InheritanceType 'get ' : 
+  Methods:
+    get_ActiveDirectoryRights(): PrivateScope, Public, HideBySig, SpecialName
+    get_InheritanceType(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ListChildrenAccessRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectoryAccessRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class System.DirectoryServices.CreateChildAccessRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectoryAccessRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class System.DirectoryServices.DeleteChildAccessRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectoryAccessRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class System.DirectoryServices.PropertyAccessRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectoryAccessRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class System.DirectoryServices.PropertySetAccessRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectoryAccessRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.PropertyAccess, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class System.DirectoryServices.ExtendedRightAccessRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectoryAccessRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class System.DirectoryServices.DeleteTreeAccessRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectoryAccessRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.Security.AccessControl.AccessControlType, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class System.DirectoryServices.ActiveDirectoryAuditRule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Security.AccessControl.ObjectAuditRule
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AuditFlags): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AuditFlags, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AuditFlags, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AuditFlags, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AuditFlags, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Principal.IdentityReference, System.DirectoryServices.ActiveDirectoryRights, System.Security.AccessControl.AuditFlags, System.Guid, System.DirectoryServices.ActiveDirectorySecurityInheritance, System.Guid): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DirectoryServices.ActiveDirectoryRights ActiveDirectoryRights 'get ' : 
+    System.DirectoryServices.ActiveDirectorySecurityInheritance InheritanceType 'get ' : 
+  Methods:
+    get_ActiveDirectoryRights(): PrivateScope, Public, HideBySig, SpecialName
+    get_InheritanceType(): PrivateScope, Public, HideBySig, SpecialName
+Struct System.DirectoryServices.AuthenticationTypes: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.AuthenticationTypes None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes Secure = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes Encryption = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes SecureSocketsLayer = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes ReadonlyServer = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes Anonymous = 16 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes FastBind = 32 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes Signing = 64 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes Sealing = 128 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes Delegation = 256 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.AuthenticationTypes ServerBind = 512 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.DereferenceAlias: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.DereferenceAlias Never = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DereferenceAlias InSearching = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DereferenceAlias FindingBaseObject = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DereferenceAlias Always = 3 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.DSDescriptionAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.ComponentModel.DescriptionAttribute
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Description 'get ' : 
+  Methods:
+    get_Description(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+Class System.DirectoryServices.DirectoryEntries: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  Interfaces:
+    System.Collections.IEnumerable
+  Properties:
+    System.DirectoryServices.SchemaNameCollection SchemaFilter 'get ' : 
+  Methods:
+    get_SchemaFilter(): PrivateScope, Public, HideBySig, SpecialName
+    Add(String, String): PrivateScope, Public, HideBySig
+    Find(String): PrivateScope, Public, HideBySig
+    Find(String, String): PrivateScope, Public, HideBySig
+    Remove(DirectoryEntry): PrivateScope, Public, HideBySig
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.DirectoryServices.DirectoryEntry: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.String, System.String, System.String, System.DirectoryServices.AuthenticationTypes): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.Object): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+  Properties:
+    System.DirectoryServices.AuthenticationTypes AuthenticationType 'get set' : 
+    System.DirectoryServices.DirectoryEntries Children 'get ' : 
+    System.Guid Guid 'get ' : 
+    System.DirectoryServices.ActiveDirectorySecurity ObjectSecurity 'get set' : 
+    System.String Name 'get ' : 
+    System.String NativeGuid 'get ' : 
+    System.Object NativeObject 'get ' : 
+    System.DirectoryServices.DirectoryEntry Parent 'get ' : 
+    System.String Password 'set' : 
+    System.String Path 'get set' : 
+    System.DirectoryServices.PropertyCollection Properties 'get ' : 
+    System.String SchemaClassName 'get ' : 
+    System.DirectoryServices.DirectoryEntry SchemaEntry 'get ' : 
+    Boolean UsePropertyCache 'get set' : 
+    System.String Username 'get set' : 
+    System.DirectoryServices.DirectoryEntryConfiguration Options 'get ' : 
+  Methods:
+    get_AuthenticationType(): PrivateScope, Public, HideBySig, SpecialName
+    set_AuthenticationType(AuthenticationTypes): PrivateScope, Public, HideBySig, SpecialName
+    get_Children(): PrivateScope, Public, HideBySig, SpecialName
+    get_Guid(): PrivateScope, Public, HideBySig, SpecialName
+    get_ObjectSecurity(): PrivateScope, Public, HideBySig, SpecialName
+    set_ObjectSecurity(ActiveDirectorySecurity): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_NativeGuid(): PrivateScope, Public, HideBySig, SpecialName
+    get_NativeObject(): PrivateScope, Public, HideBySig, SpecialName
+    get_Parent(): PrivateScope, Public, HideBySig, SpecialName
+    set_Password(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    set_Path(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Properties(): PrivateScope, Public, HideBySig, SpecialName
+    get_SchemaClassName(): PrivateScope, Public, HideBySig, SpecialName
+    get_SchemaEntry(): PrivateScope, Public, HideBySig, SpecialName
+    get_UsePropertyCache(): PrivateScope, Public, HideBySig, SpecialName
+    set_UsePropertyCache(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Username(): PrivateScope, Public, HideBySig, SpecialName
+    set_Username(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Options(): PrivateScope, Public, HideBySig, SpecialName
+    Close(): PrivateScope, Public, HideBySig
+    CommitChanges(): PrivateScope, Public, HideBySig
+    CopyTo(DirectoryEntry): PrivateScope, Public, HideBySig
+    CopyTo(DirectoryEntry, String): PrivateScope, Public, HideBySig
+    DeleteTree(): PrivateScope, Public, HideBySig
+    Exists(String): PrivateScope, Public, Static, HideBySig
+    Invoke(String, Object[]): PrivateScope, Public, HideBySig
+    InvokeGet(String): PrivateScope, Public, HideBySig
+    InvokeSet(String, Object[]): PrivateScope, Public, HideBySig
+    MoveTo(DirectoryEntry): PrivateScope, Public, HideBySig
+    MoveTo(DirectoryEntry, String): PrivateScope, Public, HideBySig
+    RefreshCache(): PrivateScope, Public, HideBySig
+    RefreshCache(String[]): PrivateScope, Public, HideBySig
+    Rename(String): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.DirectoryEntryConfiguration: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  Properties:
+    System.DirectoryServices.ReferralChasingOption Referral 'get set' : 
+    System.DirectoryServices.SecurityMasks SecurityMasks 'get set' : 
+    Int32 PageSize 'get set' : 
+    Int32 PasswordPort 'get set' : 
+    System.DirectoryServices.PasswordEncodingMethod PasswordEncoding 'get set' : 
+  Methods:
+    get_Referral(): PrivateScope, Public, HideBySig, SpecialName
+    set_Referral(ReferralChasingOption): PrivateScope, Public, HideBySig, SpecialName
+    get_SecurityMasks(): PrivateScope, Public, HideBySig, SpecialName
+    set_SecurityMasks(SecurityMasks): PrivateScope, Public, HideBySig, SpecialName
+    get_PageSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_PageSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_PasswordPort(): PrivateScope, Public, HideBySig, SpecialName
+    set_PasswordPort(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_PasswordEncoding(): PrivateScope, Public, HideBySig, SpecialName
+    set_PasswordEncoding(PasswordEncodingMethod): PrivateScope, Public, HideBySig, SpecialName
+    GetCurrentServerName(): PrivateScope, Public, HideBySig
+    IsMutuallyAuthenticated(): PrivateScope, Public, HideBySig
+    SetUserNameQueryQuota(String): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.DirectorySearcher: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.ComponentModel.Component
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.DirectoryServices.DirectoryEntry): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.DirectoryServices.DirectoryEntry, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.DirectoryServices.DirectoryEntry, System.String, System.String[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.String, System.String[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.String, System.String[], System.DirectoryServices.SearchScope): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.DirectoryServices.DirectoryEntry, System.String, System.String[], System.DirectoryServices.SearchScope): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+  Properties:
+    Boolean CacheResults 'get set' : 
+    System.TimeSpan ClientTimeout 'get set' : 
+    Boolean PropertyNamesOnly 'get set' : 
+    System.String Filter 'get set' : 
+    Int32 PageSize 'get set' : 
+    System.Collections.Specialized.StringCollection PropertiesToLoad 'get ' : 
+    System.DirectoryServices.ReferralChasingOption ReferralChasing 'get set' : 
+    System.DirectoryServices.SearchScope SearchScope 'get set' : 
+    System.TimeSpan ServerPageTimeLimit 'get set' : 
+    System.TimeSpan ServerTimeLimit 'get set' : 
+    Int32 SizeLimit 'get set' : 
+    System.DirectoryServices.DirectoryEntry SearchRoot 'get set' : 
+    System.DirectoryServices.SortOption Sort 'get set' : 
+    Boolean Asynchronous 'get set' : 
+    Boolean Tombstone 'get set' : 
+    System.String AttributeScopeQuery 'get set' : 
+    System.DirectoryServices.DereferenceAlias DerefAlias 'get set' : 
+    System.DirectoryServices.SecurityMasks SecurityMasks 'get set' : 
+    System.DirectoryServices.ExtendedDN ExtendedDN 'get set' : 
+    System.DirectoryServices.DirectorySynchronization DirectorySynchronization 'get set' : 
+    System.DirectoryServices.DirectoryVirtualListView VirtualListView 'get set' : 
+  Methods:
+    get_CacheResults(): PrivateScope, Public, HideBySig, SpecialName
+    set_CacheResults(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ClientTimeout(): PrivateScope, Public, HideBySig, SpecialName
+    set_ClientTimeout(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_PropertyNamesOnly(): PrivateScope, Public, HideBySig, SpecialName
+    set_PropertyNamesOnly(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Filter(): PrivateScope, Public, HideBySig, SpecialName
+    set_Filter(String): PrivateScope, Public, HideBySig, SpecialName
+    get_PageSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_PageSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_PropertiesToLoad(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReferralChasing(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReferralChasing(ReferralChasingOption): PrivateScope, Public, HideBySig, SpecialName
+    get_SearchScope(): PrivateScope, Public, HideBySig, SpecialName
+    set_SearchScope(SearchScope): PrivateScope, Public, HideBySig, SpecialName
+    get_ServerPageTimeLimit(): PrivateScope, Public, HideBySig, SpecialName
+    set_ServerPageTimeLimit(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_ServerTimeLimit(): PrivateScope, Public, HideBySig, SpecialName
+    set_ServerTimeLimit(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_SizeLimit(): PrivateScope, Public, HideBySig, SpecialName
+    set_SizeLimit(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_SearchRoot(): PrivateScope, Public, HideBySig, SpecialName
+    set_SearchRoot(DirectoryEntry): PrivateScope, Public, HideBySig, SpecialName
+    get_Sort(): PrivateScope, Public, HideBySig, SpecialName
+    set_Sort(SortOption): PrivateScope, Public, HideBySig, SpecialName
+    get_Asynchronous(): PrivateScope, Public, HideBySig, SpecialName
+    set_Asynchronous(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Tombstone(): PrivateScope, Public, HideBySig, SpecialName
+    set_Tombstone(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_AttributeScopeQuery(): PrivateScope, Public, HideBySig, SpecialName
+    set_AttributeScopeQuery(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DerefAlias(): PrivateScope, Public, HideBySig, SpecialName
+    set_DerefAlias(DereferenceAlias): PrivateScope, Public, HideBySig, SpecialName
+    get_SecurityMasks(): PrivateScope, Public, HideBySig, SpecialName
+    set_SecurityMasks(SecurityMasks): PrivateScope, Public, HideBySig, SpecialName
+    get_ExtendedDN(): PrivateScope, Public, HideBySig, SpecialName
+    set_ExtendedDN(ExtendedDN): PrivateScope, Public, HideBySig, SpecialName
+    get_DirectorySynchronization(): PrivateScope, Public, HideBySig, SpecialName
+    set_DirectorySynchronization(DirectorySynchronization): PrivateScope, Public, HideBySig, SpecialName
+    get_VirtualListView(): PrivateScope, Public, HideBySig, SpecialName
+    set_VirtualListView(DirectoryVirtualListView): PrivateScope, Public, HideBySig, SpecialName
+    FindOne(): PrivateScope, Public, HideBySig
+    FindAll(): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.DirectoryServicesPermission: AutoLayout, AnsiClass, Class, Public, Sealed, Serializable, BeforeFieldInit
+  :System.Security.Permissions.ResourcePermissionBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Security.Permissions.PermissionState): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.DirectoryServicesPermissionAccess, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.DirectoryServicesPermissionEntry[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DirectoryServices.DirectoryServicesPermissionEntryCollection PermissionEntries 'get ' : 
+  Methods:
+    get_PermissionEntries(): PrivateScope, Public, HideBySig, SpecialName
+Struct System.DirectoryServices.DirectoryServicesPermissionAccess: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.DirectoryServicesPermissionAccess None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DirectoryServicesPermissionAccess Browse = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DirectoryServicesPermissionAccess Write = 6 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.DirectoryServicesPermissionAttribute: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Security.Permissions.CodeAccessSecurityAttribute
+    Void .ctor(System.Security.Permissions.SecurityAction): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Path 'get set' : 
+    System.DirectoryServices.DirectoryServicesPermissionAccess PermissionAccess 'get set' : 
+  Methods:
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    set_Path(String): PrivateScope, Public, HideBySig, SpecialName
+    get_PermissionAccess(): PrivateScope, Public, HideBySig, SpecialName
+    set_PermissionAccess(DirectoryServicesPermissionAccess): PrivateScope, Public, HideBySig, SpecialName
+    CreatePermission(): PrivateScope, Public, Virtual, HideBySig
+Class System.DirectoryServices.DirectoryServicesPermissionEntry: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+    Void .ctor(System.DirectoryServices.DirectoryServicesPermissionAccess, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Path 'get ' : 
+    System.DirectoryServices.DirectoryServicesPermissionAccess PermissionAccess 'get ' : 
+  Methods:
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    get_PermissionAccess(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.DirectoryServicesPermissionEntryCollection: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.DirectoryServices.DirectoryServicesPermissionEntry Item [Int32] 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, DirectoryServicesPermissionEntry): PrivateScope, Public, HideBySig, SpecialName
+    Add(DirectoryServicesPermissionEntry): PrivateScope, Public, HideBySig
+    AddRange(DirectoryServicesPermissionEntry[]): PrivateScope, Public, HideBySig
+    AddRange(DirectoryServicesPermissionEntryCollection): PrivateScope, Public, HideBySig
+    Contains(DirectoryServicesPermissionEntry): PrivateScope, Public, HideBySig
+    CopyTo(DirectoryServicesPermissionEntry[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(DirectoryServicesPermissionEntry): PrivateScope, Public, HideBySig
+    Insert(Int32, DirectoryServicesPermissionEntry): PrivateScope, Public, HideBySig
+    Remove(DirectoryServicesPermissionEntry): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.DirectorySynchronization: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.DirectorySynchronizationOptions): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.DirectorySynchronization): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.DirectorySynchronizationOptions, Byte[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DirectoryServices.DirectorySynchronizationOptions Option 'get set' : 
+  Methods:
+    get_Option(): PrivateScope, Public, HideBySig, SpecialName
+    set_Option(DirectorySynchronizationOptions): PrivateScope, Public, HideBySig, SpecialName
+    GetDirectorySynchronizationCookie(): PrivateScope, Public, HideBySig
+    ResetDirectorySynchronizationCookie(): PrivateScope, Public, HideBySig
+    ResetDirectorySynchronizationCookie(Byte[]): PrivateScope, Public, HideBySig
+    Copy(): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.DirectorySynchronizationOptions: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int64 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.DirectorySynchronizationOptions None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DirectorySynchronizationOptions ObjectSecurity = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DirectorySynchronizationOptions ParentsFirst = 2048 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DirectorySynchronizationOptions PublicDataOnly = 8192 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.DirectorySynchronizationOptions IncrementalValues = 2147483648 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.DirectoryVirtualListView: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, Int32, System.DirectoryServices.DirectoryVirtualListViewContext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32, System.String, System.DirectoryServices.DirectoryVirtualListViewContext): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 BeforeCount 'get set' : 
+    Int32 AfterCount 'get set' : 
+    Int32 Offset 'get set' : 
+    Int32 TargetPercentage 'get set' : 
+    System.String Target 'get set' : 
+    Int32 ApproximateTotal 'get set' : 
+    System.DirectoryServices.DirectoryVirtualListViewContext DirectoryVirtualListViewContext 'get set' : 
+  Methods:
+    get_BeforeCount(): PrivateScope, Public, HideBySig, SpecialName
+    set_BeforeCount(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_AfterCount(): PrivateScope, Public, HideBySig, SpecialName
+    set_AfterCount(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Offset(): PrivateScope, Public, HideBySig, SpecialName
+    set_Offset(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_TargetPercentage(): PrivateScope, Public, HideBySig, SpecialName
+    set_TargetPercentage(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Target(): PrivateScope, Public, HideBySig, SpecialName
+    set_Target(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ApproximateTotal(): PrivateScope, Public, HideBySig, SpecialName
+    set_ApproximateTotal(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DirectoryVirtualListViewContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_DirectoryVirtualListViewContext(DirectoryVirtualListViewContext): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.DirectoryVirtualListViewContext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Copy(): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ExtendedDN: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ExtendedDN None = -1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ExtendedDN HexString = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ExtendedDN Standard = 1 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.PasswordEncodingMethod: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.PasswordEncodingMethod PasswordEncodingSsl = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.PasswordEncodingMethod PasswordEncodingClear = 1 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.PropertyCollection: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  Interfaces:
+    System.Collections.IDictionary
+    System.Collections.ICollection
+    System.Collections.IEnumerable
+  Properties:
+    System.DirectoryServices.PropertyValueCollection Item [System.String] 'get ' : 
+    Int32 Count 'get ' : 
+    System.Collections.ICollection PropertyNames 'get ' : 
+    System.Collections.ICollection Values 'get ' : 
+  Methods:
+    get_Item(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_PropertyNames(): PrivateScope, Public, HideBySig, SpecialName
+    get_Values(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Contains(String): PrivateScope, Public, HideBySig
+    CopyTo(PropertyValueCollection[], Int32): PrivateScope, Public, HideBySig
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.DirectoryServices.PropertyValueCollection: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.Object Item [Int32] 'get set' : 
+    System.String PropertyName 'get ' : 
+    System.Object Value 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, Object): PrivateScope, Public, HideBySig, SpecialName
+    get_PropertyName(): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(Object): PrivateScope, Public, HideBySig, SpecialName
+    Add(Object): PrivateScope, Public, HideBySig
+    AddRange(Object[]): PrivateScope, Public, HideBySig
+    AddRange(PropertyValueCollection): PrivateScope, Public, HideBySig
+    Contains(Object): PrivateScope, Public, HideBySig
+    CopyTo(Object[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(Object): PrivateScope, Public, HideBySig
+    Insert(Int32, Object): PrivateScope, Public, HideBySig
+    Remove(Object): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ReferralChasingOption: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ReferralChasingOption None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ReferralChasingOption Subordinate = 32 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ReferralChasingOption External = 64 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ReferralChasingOption All = 96 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ResultPropertyCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.DictionaryBase
+  Properties:
+    System.DirectoryServices.ResultPropertyValueCollection Item [System.String] 'get ' : 
+    System.Collections.ICollection PropertyNames 'get ' : 
+    System.Collections.ICollection Values 'get ' : 
+  Methods:
+    get_Item(String): PrivateScope, Public, HideBySig, SpecialName
+    get_PropertyNames(): PrivateScope, Public, HideBySig, SpecialName
+    get_Values(): PrivateScope, Public, HideBySig, SpecialName
+    Contains(String): PrivateScope, Public, HideBySig
+    CopyTo(ResultPropertyValueCollection[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ResultPropertyValueCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.Object Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(Object): PrivateScope, Public, HideBySig
+    IndexOf(Object): PrivateScope, Public, HideBySig
+    CopyTo(Object[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.SchemaNameCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.Collections.IList
+    System.Collections.ICollection
+    System.Collections.IEnumerable
+  Properties:
+    System.String Item [Int32] 'get set' : 
+    Int32 Count 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, String): PrivateScope, Public, HideBySig, SpecialName
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    Add(String): PrivateScope, Public, HideBySig
+    AddRange(String[]): PrivateScope, Public, HideBySig
+    AddRange(SchemaNameCollection): PrivateScope, Public, HideBySig
+    Clear(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Contains(String): PrivateScope, Public, HideBySig
+    CopyTo(String[], Int32): PrivateScope, Public, HideBySig
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    IndexOf(String): PrivateScope, Public, HideBySig
+    Insert(Int32, String): PrivateScope, Public, HideBySig
+    Remove(String): PrivateScope, Public, HideBySig
+    RemoveAt(Int32): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.DirectoryServices.SearchResult: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  Properties:
+    System.String Path 'get ' : 
+    System.DirectoryServices.ResultPropertyCollection Properties 'get ' : 
+  Methods:
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig, HasSecurity
+    get_Path(): PrivateScope, Public, HideBySig, SpecialName
+    get_Properties(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.SearchResultCollection: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.MarshalByRefObject
+  Interfaces:
+    System.Collections.ICollection
+    System.Collections.IEnumerable
+    System.IDisposable
+  Properties:
+    System.DirectoryServices.SearchResult Item [Int32] 'get ' : 
+    Int32 Count 'get ' : 
+    IntPtr Handle 'get ' : 
+    System.String[] PropertiesLoaded 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Count(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_Handle(): PrivateScope, Public, HideBySig, SpecialName
+    get_PropertiesLoaded(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetEnumerator(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    Contains(SearchResult): PrivateScope, Public, HideBySig
+    CopyTo(SearchResult[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(SearchResult): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.SearchScope: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.SearchScope Base = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.SearchScope OneLevel = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.SearchScope Subtree = 2 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.SecurityMasks: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.SecurityMasks None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.SecurityMasks Owner = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.SecurityMasks Group = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.SecurityMasks Dacl = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.SecurityMasks Sacl = 8 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.SortDirection: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.SortDirection Ascending = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.SortDirection Descending = 1 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.SortOption: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.DirectoryServices.SortDirection): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String PropertyName 'get set' : 
+    System.DirectoryServices.SortDirection Direction 'get set' : 
+  Methods:
+    get_PropertyName(): PrivateScope, Public, HideBySig, SpecialName
+    set_PropertyName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Direction(): PrivateScope, Public, HideBySig, SpecialName
+    set_Direction(SortDirection): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.DirectoryServicesCOMException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Runtime.InteropServices.COMException
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 ExtendedError 'get ' : 
+    System.String ExtendedErrorMessage 'get ' : 
+  Methods:
+    get_ExtendedError(): PrivateScope, Public, HideBySig, SpecialName
+    get_ExtendedErrorMessage(): PrivateScope, Public, HideBySig, SpecialName
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectoryReplicationMetadata: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.DictionaryBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.AttributeMetadata Item [System.String] 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlyStringCollection AttributeNames 'get ' : 
+    System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection Values 'get ' : 
+  Methods:
+    get_Item(String): PrivateScope, Public, HideBySig, SpecialName
+    get_AttributeNames(): PrivateScope, Public, HideBySig, SpecialName
+    get_Values(): PrivateScope, Public, HideBySig, SpecialName
+    Contains(String): PrivateScope, Public, HideBySig
+    CopyTo(AttributeMetadata[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.HourOfDay: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.HourOfDay Zero = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay One = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Two = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Three = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Four = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Five = 5 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Six = 6 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Seven = 7 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Eight = 8 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Nine = 9 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Ten = 10 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Eleven = 11 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Twelve = 12 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Thirteen = 13 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Fourteen = 14 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Fifteen = 15 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Sixteen = 16 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Seventeen = 17 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Eighteen = 18 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Nineteen = 19 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay Twenty = 20 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay TwentyOne = 21 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay TwentyTwo = 22 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.HourOfDay TwentyThree = 23 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.MinuteOfHour: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.MinuteOfHour Zero = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.MinuteOfHour Fifteen = 15 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.MinuteOfHour Thirty = 30 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.MinuteOfHour FortyFive = 45 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean[,,] RawSchedule 'get set' : 
+  Methods:
+    get_RawSchedule(): PrivateScope, Public, HideBySig, SpecialName
+    set_RawSchedule(Boolean[,,]): PrivateScope, Public, HideBySig, SpecialName
+    SetSchedule(DayOfWeek, HourOfDay, MinuteOfHour, HourOfDay, MinuteOfHour): PrivateScope, Public, HideBySig
+    SetSchedule(DayOfWeek[], HourOfDay, MinuteOfHour, HourOfDay, MinuteOfHour): PrivateScope, Public, HideBySig
+    SetDailySchedule(HourOfDay, MinuteOfHour, HourOfDay, MinuteOfHour): PrivateScope, Public, HideBySig
+    ResetSchedule(): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.SchemaClassType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.SchemaClassType Type88 = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SchemaClassType Structural = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SchemaClassType Abstract = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SchemaClassType Auxiliary = 3 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.PropertyTypes: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.PropertyTypes Indexed = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.PropertyTypes InGlobalCatalog = 4 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition
+  Properties:
+    System.DirectoryServices.ActiveDirectory.DirectoryServer SchemaRoleOwner 'get ' : 
+  Methods:
+    GetSchema(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    RefreshSchema(): PrivateScope, Public, HideBySig
+    FindClass(String): PrivateScope, Public, HideBySig
+    FindDefunctClass(String): PrivateScope, Public, HideBySig
+    FindAllClasses(): PrivateScope, Public, HideBySig
+    FindAllClasses(SchemaClassType): PrivateScope, Public, HideBySig
+    FindAllDefunctClasses(): PrivateScope, Public, HideBySig
+    FindProperty(String): PrivateScope, Public, HideBySig
+    FindDefunctProperty(String): PrivateScope, Public, HideBySig
+    FindAllProperties(): PrivateScope, Public, HideBySig
+    FindAllProperties(PropertyTypes): PrivateScope, Public, HideBySig
+    FindAllDefunctProperties(): PrivateScope, Public, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetCurrentSchema(): PrivateScope, Public, Static, HideBySig
+    get_SchemaRoleOwner(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaClass: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.String CommonName 'get set' : 
+    System.String Oid 'get set' : 
+    System.String Description 'get set' : 
+    Boolean IsDefunct 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaClassCollection PossibleSuperiors 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaClassCollection PossibleInferiors 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection MandatoryProperties 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection OptionalProperties 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaClassCollection AuxiliaryClasses 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaClass SubClassOf 'get set' : 
+    System.DirectoryServices.ActiveDirectory.SchemaClassType Type 'get set' : 
+    System.Guid SchemaGuid 'get set' : 
+    System.DirectoryServices.ActiveDirectorySecurity DefaultObjectSecurityDescriptor 'get set' : 
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    FindByName(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    GetAllProperties(): PrivateScope, Public, HideBySig
+    Save(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_CommonName(): PrivateScope, Public, HideBySig, SpecialName
+    set_CommonName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Oid(): PrivateScope, Public, HideBySig, SpecialName
+    set_Oid(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    set_Description(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDefunct(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsDefunct(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_PossibleSuperiors(): PrivateScope, Public, HideBySig, SpecialName
+    get_PossibleInferiors(): PrivateScope, Public, HideBySig, SpecialName
+    get_MandatoryProperties(): PrivateScope, Public, HideBySig, SpecialName
+    get_OptionalProperties(): PrivateScope, Public, HideBySig, SpecialName
+    get_AuxiliaryClasses(): PrivateScope, Public, HideBySig, SpecialName
+    get_SubClassOf(): PrivateScope, Public, HideBySig, SpecialName
+    set_SubClassOf(ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(SchemaClassType): PrivateScope, Public, HideBySig, SpecialName
+    get_SchemaGuid(): PrivateScope, Public, HideBySig, SpecialName
+    set_SchemaGuid(Guid): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultObjectSecurityDescriptor(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultObjectSecurityDescriptor(ActiveDirectorySecurity): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaClassCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaClass Item [Int32] 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig, SpecialName
+    Add(ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySchemaClass[]): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySchemaClassCollection): PrivateScope, Public, HideBySig
+    AddRange(ReadOnlyActiveDirectorySchemaClassCollection): PrivateScope, Public, HideBySig
+    Remove(ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig
+    Insert(Int32, ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig
+    Contains(ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySchemaClass[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.String CommonName 'get set' : 
+    System.String Oid 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Syntax 'get set' : 
+    System.String Description 'get set' : 
+    Boolean IsSingleValued 'get set' : 
+    Boolean IsIndexed 'get set' : 
+    Boolean IsIndexedOverContainer 'get set' : 
+    Boolean IsInAnr 'get set' : 
+    Boolean IsOnTombstonedObject 'get set' : 
+    Boolean IsTupleIndexed 'get set' : 
+    Boolean IsInGlobalCatalog 'get set' : 
+    System.Nullable`1[System.Int32] RangeLower 'get set' : 
+    System.Nullable`1[System.Int32] RangeUpper 'get set' : 
+    Boolean IsDefunct 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty Link 'get ' : 
+    System.Nullable`1[System.Int32] LinkId 'get set' : 
+    System.Guid SchemaGuid 'get set' : 
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    FindByName(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    Save(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_CommonName(): PrivateScope, Public, HideBySig, SpecialName
+    set_CommonName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Oid(): PrivateScope, Public, HideBySig, SpecialName
+    set_Oid(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Syntax(): PrivateScope, Public, HideBySig, SpecialName
+    set_Syntax(ActiveDirectorySyntax): PrivateScope, Public, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    set_Description(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSingleValued(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsSingleValued(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsIndexed(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsIndexed(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsIndexedOverContainer(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsIndexedOverContainer(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsInAnr(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsInAnr(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsOnTombstonedObject(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsOnTombstonedObject(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsTupleIndexed(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsTupleIndexed(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_IsInGlobalCatalog(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsInGlobalCatalog(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_RangeLower(): PrivateScope, Public, HideBySig, SpecialName
+    set_RangeLower(Nullable`1): PrivateScope, Public, HideBySig, SpecialName
+    get_RangeUpper(): PrivateScope, Public, HideBySig, SpecialName
+    set_RangeUpper(Nullable`1): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDefunct(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsDefunct(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_Link(): PrivateScope, Public, HideBySig, SpecialName
+    get_LinkId(): PrivateScope, Public, HideBySig, SpecialName
+    set_LinkId(Nullable`1): PrivateScope, Public, HideBySig, SpecialName
+    get_SchemaGuid(): PrivateScope, Public, HideBySig, SpecialName
+    set_SchemaGuid(Guid): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaPropertyCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty Item [Int32] 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ActiveDirectorySchemaProperty): PrivateScope, Public, HideBySig, SpecialName
+    Add(ActiveDirectorySchemaProperty): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySchemaProperty[]): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySchemaPropertyCollection): PrivateScope, Public, HideBySig
+    AddRange(ReadOnlyActiveDirectorySchemaPropertyCollection): PrivateScope, Public, HideBySig
+    Remove(ActiveDirectorySchemaProperty): PrivateScope, Public, HideBySig
+    Insert(Int32, ActiveDirectorySchemaProperty): PrivateScope, Public, HideBySig
+    Contains(ActiveDirectorySchemaProperty): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySchemaProperty[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySchemaProperty): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions AutoTopologyDisabled = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions TopologyCleanupDisabled = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions AutoMinimumHopDisabled = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions StaleServerDetectDisabled = 8 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions AutoInterSiteTopologyDisabled = 16 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions GroupMembershipCachingEnabled = 32 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions ForceKccWindows2003Behavior = 64 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions UseWindows2000IstgElection = 128 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions RandomBridgeHeaderServerSelectionDisabled = 256 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions UseHashingForReplicationSchedule = 512 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions RedundantServerTopologyEnabled = 1024 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySite: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainCollection Domains 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnetCollection Subnets 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection Servers 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection AdjacentSites 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection SiteLinks 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DirectoryServer InterSiteTopologyGenerator 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteOptions Options 'get set' : 
+    System.String Location 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection BridgeheadServers 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DirectoryServerCollection PreferredSmtpBridgeheadServers 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DirectoryServerCollection PreferredRpcBridgeheadServers 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule IntraSiteReplicationSchedule 'get set' : 
+  Methods:
+    FindByName(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    GetComputerSite(): PrivateScope, Public, Static, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Domains(): PrivateScope, Public, HideBySig, SpecialName
+    get_Subnets(): PrivateScope, Public, HideBySig, SpecialName
+    get_Servers(): PrivateScope, Public, HideBySig, SpecialName
+    get_AdjacentSites(): PrivateScope, Public, HideBySig, SpecialName
+    get_SiteLinks(): PrivateScope, Public, HideBySig, SpecialName
+    get_InterSiteTopologyGenerator(): PrivateScope, Public, HideBySig, SpecialName
+    set_InterSiteTopologyGenerator(DirectoryServer): PrivateScope, Public, HideBySig, SpecialName
+    get_Options(): PrivateScope, Public, HideBySig, SpecialName
+    set_Options(ActiveDirectorySiteOptions): PrivateScope, Public, HideBySig, SpecialName
+    get_Location(): PrivateScope, Public, HideBySig, SpecialName
+    set_Location(String): PrivateScope, Public, HideBySig, SpecialName
+    get_BridgeheadServers(): PrivateScope, Public, HideBySig, SpecialName
+    get_PreferredSmtpBridgeheadServers(): PrivateScope, Public, HideBySig, SpecialName
+    get_PreferredRpcBridgeheadServers(): PrivateScope, Public, HideBySig, SpecialName
+    get_IntraSiteReplicationSchedule(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntraSiteReplicationSchedule(ActiveDirectorySchedule): PrivateScope, Public, HideBySig, SpecialName
+    Save(): PrivateScope, Public, HideBySig
+    Delete(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySite Item [Int32] 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ActiveDirectorySite): PrivateScope, Public, HideBySig, SpecialName
+    Add(ActiveDirectorySite): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySite[]): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySiteCollection): PrivateScope, Public, HideBySig
+    Contains(ActiveDirectorySite): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySite[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySite): PrivateScope, Public, HideBySig
+    Insert(Int32, ActiveDirectorySite): PrivateScope, Public, HideBySig
+    Remove(ActiveDirectorySite): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType, System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteCollection Sites 'get ' : 
+    Int32 Cost 'get set' : 
+    System.TimeSpan ReplicationInterval 'get set' : 
+    Boolean ReciprocalReplicationEnabled 'get set' : 
+    Boolean NotificationEnabled 'get set' : 
+    Boolean DataCompressionEnabled 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule InterSiteReplicationSchedule 'get set' : 
+  Methods:
+    FindByName(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    FindByName(DirectoryContext, String, ActiveDirectoryTransportType): PrivateScope, Public, Static, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_TransportType(): PrivateScope, Public, HideBySig, SpecialName
+    get_Sites(): PrivateScope, Public, HideBySig, SpecialName
+    get_Cost(): PrivateScope, Public, HideBySig, SpecialName
+    set_Cost(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ReplicationInterval(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReplicationInterval(TimeSpan): PrivateScope, Public, HideBySig, SpecialName
+    get_ReciprocalReplicationEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReciprocalReplicationEnabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_NotificationEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_NotificationEnabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_DataCompressionEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataCompressionEnabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_InterSiteReplicationSchedule(): PrivateScope, Public, HideBySig, SpecialName
+    set_InterSiteReplicationSchedule(ActiveDirectorySchedule): PrivateScope, Public, HideBySig, SpecialName
+    Save(): PrivateScope, Public, HideBySig
+    Delete(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkBridge: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection SiteLinks 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType 'get ' : 
+  Methods:
+    FindByName(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    FindByName(DirectoryContext, String, ActiveDirectoryTransportType): PrivateScope, Public, Static, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_SiteLinks(): PrivateScope, Public, HideBySig, SpecialName
+    get_TransportType(): PrivateScope, Public, HideBySig, SpecialName
+    Save(): PrivateScope, Public, HideBySig
+    Delete(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink Item [Int32] 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ActiveDirectorySiteLink): PrivateScope, Public, HideBySig, SpecialName
+    Add(ActiveDirectorySiteLink): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySiteLink[]): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySiteLinkCollection): PrivateScope, Public, HideBySig
+    Contains(ActiveDirectorySiteLink): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySiteLink[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySiteLink): PrivateScope, Public, HideBySig
+    Insert(Int32, ActiveDirectorySiteLink): PrivateScope, Public, HideBySig
+    Remove(ActiveDirectorySiteLink): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySite Site 'get set' : 
+    System.String Location 'get set' : 
+  Methods:
+    FindByName(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Site(): PrivateScope, Public, HideBySig, SpecialName
+    set_Site(ActiveDirectorySite): PrivateScope, Public, HideBySig, SpecialName
+    get_Location(): PrivateScope, Public, HideBySig, SpecialName
+    set_Location(String): PrivateScope, Public, HideBySig, SpecialName
+    Save(): PrivateScope, Public, HideBySig
+    Delete(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnetCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySubnet Item [Int32] 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, ActiveDirectorySubnet): PrivateScope, Public, HideBySig, SpecialName
+    Add(ActiveDirectorySubnet): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySubnet[]): PrivateScope, Public, HideBySig
+    AddRange(ActiveDirectorySubnetCollection): PrivateScope, Public, HideBySig
+    Contains(ActiveDirectorySubnet): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySubnet[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySubnet): PrivateScope, Public, HideBySig
+    Insert(Int32, ActiveDirectorySubnet): PrivateScope, Public, HideBySig
+    Remove(ActiveDirectorySubnet): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax CaseExactString = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax CaseIgnoreString = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax NumericString = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax DirectoryString = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax OctetString = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax SecurityDescriptor = 5 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Int = 6 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Int64 = 7 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Bool = 8 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Oid = 9 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax GeneralizedTime = 10 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax UtcTime = 11 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax DN = 12 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax DNWithBinary = 13 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax DNWithString = 14 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Enumeration = 15 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax IA5String = 16 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax PrintableString = 17 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax Sid = 18 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax AccessPointDN = 19 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax ORName = 20 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax PresentationAddress = 21 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySyntax ReplicaLink = 22 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.AdamInstance: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.DirectoryServer
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ConfigurationSet ConfigurationSet 'get ' : 
+    System.String HostName 'get ' : 
+    Int32 LdapPort 'get ' : 
+    Int32 SslPort 'get ' : 
+    System.DirectoryServices.ActiveDirectory.AdamRoleCollection Roles 'get ' : 
+    System.String DefaultPartition 'get set' : 
+    System.String IPAddress 'get ' : 
+    System.String SiteName 'get ' : 
+    System.DirectoryServices.ActiveDirectory.SyncUpdateCallback SyncFromAllServersCallback 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection InboundConnections 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection OutboundConnections 'get ' : 
+  Methods:
+    GetAdamInstance(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    FindAll(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    TransferRoleOwnership(AdamRole): PrivateScope, Public, HideBySig
+    SeizeRoleOwnership(AdamRole): PrivateScope, Public, HideBySig
+    CheckReplicationConsistency(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationCursors(String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationOperationInformation(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationNeighbors(String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetAllReplicationNeighbors(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationConnectionFailures(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationMetadata(String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    SyncReplicaFromServer(String, String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    TriggerSyncReplicaFromNeighbors(String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    SyncReplicaFromAllServers(String, SyncFromAllServersOptions): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    Save(): PrivateScope, Public, HideBySig
+    get_ConfigurationSet(): PrivateScope, Public, HideBySig, SpecialName
+    get_HostName(): PrivateScope, Public, HideBySig, SpecialName
+    get_LdapPort(): PrivateScope, Public, HideBySig, SpecialName
+    get_SslPort(): PrivateScope, Public, HideBySig, SpecialName
+    get_Roles(): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultPartition(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultPartition(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IPAddress(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    get_SiteName(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    get_SyncFromAllServersCallback(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    set_SyncFromAllServersCallback(SyncUpdateCallback): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    get_InboundConnections(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    get_OutboundConnections(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.AdamInstanceCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.AdamInstance Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(AdamInstance): PrivateScope, Public, HideBySig
+    IndexOf(AdamInstance): PrivateScope, Public, HideBySig
+    CopyTo(AdamInstance[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ApplicationPartition: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DirectoryServices.ActiveDirectory.DirectoryServerCollection DirectoryServers 'get ' : 
+    System.String SecurityReferenceDomain 'get set' : 
+  Methods:
+    GetApplicationPartition(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindByName(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    FindDirectoryServer(): PrivateScope, Public, HideBySig
+    FindDirectoryServer(String): PrivateScope, Public, HideBySig
+    FindDirectoryServer(Boolean): PrivateScope, Public, HideBySig
+    FindDirectoryServer(String, Boolean): PrivateScope, Public, HideBySig
+    FindAllDirectoryServers(): PrivateScope, Public, HideBySig
+    FindAllDirectoryServers(String): PrivateScope, Public, HideBySig
+    FindAllDiscoverableDirectoryServers(): PrivateScope, Public, HideBySig
+    FindAllDiscoverableDirectoryServers(String): PrivateScope, Public, HideBySig
+    Delete(): PrivateScope, Public, HideBySig
+    Save(): PrivateScope, Public, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    get_DirectoryServers(): PrivateScope, Public, HideBySig, SpecialName
+    get_SecurityReferenceDomain(): PrivateScope, Public, HideBySig, SpecialName
+    set_SecurityReferenceDomain(String): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ApplicationPartition Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ApplicationPartition): PrivateScope, Public, HideBySig
+    IndexOf(ApplicationPartition): PrivateScope, Public, HideBySig
+    CopyTo(ApplicationPartition[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.AttributeMetadata: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String Name 'get ' : 
+    Int32 Version 'get ' : 
+    System.DateTime LastOriginatingChangeTime 'get ' : 
+    System.Guid LastOriginatingInvocationId 'get ' : 
+    Int64 OriginatingChangeUsn 'get ' : 
+    Int64 LocalChangeUsn 'get ' : 
+    System.String OriginatingServer 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Version(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastOriginatingChangeTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastOriginatingInvocationId(): PrivateScope, Public, HideBySig, SpecialName
+    get_OriginatingChangeUsn(): PrivateScope, Public, HideBySig, SpecialName
+    get_LocalChangeUsn(): PrivateScope, Public, HideBySig, SpecialName
+    get_OriginatingServer(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.AttributeMetadataCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.AttributeMetadata Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(AttributeMetadata): PrivateScope, Public, HideBySig
+    IndexOf(AttributeMetadata): PrivateScope, Public, HideBySig
+    CopyTo(AttributeMetadata[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ConfigurationSet: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  Properties:
+    System.String Name 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection Sites 'get ' : 
+    System.DirectoryServices.ActiveDirectory.AdamInstanceCollection AdamInstances 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection ApplicationPartitions 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema Schema 'get ' : 
+    System.DirectoryServices.ActiveDirectory.AdamInstance SchemaRoleOwner 'get ' : 
+    System.DirectoryServices.ActiveDirectory.AdamInstance NamingRoleOwner 'get ' : 
+  Methods:
+    Dispose(): PrivateScope, Public, HideBySig
+    GetConfigurationSet(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindAdamInstance(): PrivateScope, Public, HideBySig
+    FindAdamInstance(String): PrivateScope, Public, HideBySig
+    FindAdamInstance(String, String): PrivateScope, Public, HideBySig
+    FindAllAdamInstances(): PrivateScope, Public, HideBySig
+    FindAllAdamInstances(String): PrivateScope, Public, HideBySig
+    FindAllAdamInstances(String, String): PrivateScope, Public, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    GetSecurityLevel(): PrivateScope, Public, HideBySig
+    SetSecurityLevel(ReplicationSecurityLevel): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Sites(): PrivateScope, Public, HideBySig, SpecialName
+    get_AdamInstances(): PrivateScope, Public, HideBySig, SpecialName
+    get_ApplicationPartitions(): PrivateScope, Public, HideBySig, SpecialName
+    get_Schema(): PrivateScope, Public, HideBySig, SpecialName
+    get_SchemaRoleOwner(): PrivateScope, Public, HideBySig, SpecialName
+    get_NamingRoleOwner(): PrivateScope, Public, HideBySig, SpecialName
+Struct System.DirectoryServices.ActiveDirectory.DirectoryContextType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.DirectoryContextType Domain = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DirectoryContextType Forest = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DirectoryContextType DirectoryServer = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DirectoryContextType ConfigurationSet = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DirectoryContextType ApplicationPartition = 4 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.DirectoryContext: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContextType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContextType, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContextType, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContextType, System.String, System.String, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName, HasSecurity
+  Properties:
+    System.String Name 'get ' : 
+    System.String UserName 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DirectoryContextType ContextType 'get ' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_UserName(): PrivateScope, Public, HideBySig, SpecialName
+    get_ContextType(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.DirectoryServer: AutoLayout, AnsiClass, Class, Public, Abstract, HasSecurity, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlyStringCollection Partitions 'get ' : 
+    System.String IPAddress 'get ' : 
+    System.String SiteName 'get ' : 
+    System.DirectoryServices.ActiveDirectory.SyncUpdateCallback SyncFromAllServersCallback 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection InboundConnections 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection OutboundConnections 'get ' : 
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    MoveToAnotherSite(String): PrivateScope, Public, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    CheckReplicationConsistency(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    GetReplicationCursors(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    GetReplicationOperationInformation(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    GetReplicationNeighbors(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    GetAllReplicationNeighbors(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    GetReplicationConnectionFailures(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    GetReplicationMetadata(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    SyncReplicaFromServer(String, String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    TriggerSyncReplicaFromNeighbors(String): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    SyncReplicaFromAllServers(String, SyncFromAllServersOptions): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, HasSecurity
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Partitions(): PrivateScope, Public, HideBySig, SpecialName
+    get_IPAddress(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName, HasSecurity
+    get_SiteName(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName, HasSecurity
+    get_SyncFromAllServersCallback(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName, HasSecurity
+    set_SyncFromAllServersCallback(SyncUpdateCallback): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName, HasSecurity
+    get_InboundConnections(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName, HasSecurity
+    get_OutboundConnections(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.DirectoryServerCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.CollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.DirectoryServer Item [Int32] 'get set' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    set_Item(Int32, DirectoryServer): PrivateScope, Public, HideBySig, SpecialName
+    Add(DirectoryServer): PrivateScope, Public, HideBySig
+    AddRange(DirectoryServer[]): PrivateScope, Public, HideBySig
+    Contains(DirectoryServer): PrivateScope, Public, HideBySig
+    CopyTo(DirectoryServer[], Int32): PrivateScope, Public, HideBySig
+    IndexOf(DirectoryServer): PrivateScope, Public, HideBySig
+    Insert(Int32, DirectoryServer): PrivateScope, Public, HideBySig
+    Remove(DirectoryServer): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.DomainMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.DomainMode Unknown = -1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainMode Windows2000MixedDomain = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainMode Windows2000NativeDomain = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainMode Windows2003InterimDomain = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainMode Windows2003Domain = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainMode Windows2008Domain = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainMode Windows2008R2Domain = 5 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainMode Windows8Domain = 6 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainMode Windows2012R2Domain = 7 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.Domain: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.ActiveDirectoryPartition
+  Properties:
+    System.DirectoryServices.ActiveDirectory.Forest Forest 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainControllerCollection DomainControllers 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainCollection Children 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainMode DomainMode 'get ' : 
+    Int32 DomainModeLevel 'get ' : 
+    System.DirectoryServices.ActiveDirectory.Domain Parent 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainController PdcRoleOwner 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainController RidRoleOwner 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainController InfrastructureRoleOwner 'get ' : 
+  Methods:
+    GetDomain(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    GetComputerDomain(): PrivateScope, Public, Static, HideBySig
+    RaiseDomainFunctionalityLevel(Int32): PrivateScope, Public, HideBySig
+    RaiseDomainFunctionality(DomainMode): PrivateScope, Public, HideBySig
+    FindDomainController(): PrivateScope, Public, HideBySig
+    FindDomainController(String): PrivateScope, Public, HideBySig
+    FindDomainController(LocatorOptions): PrivateScope, Public, HideBySig
+    FindDomainController(String, LocatorOptions): PrivateScope, Public, HideBySig
+    FindAllDomainControllers(): PrivateScope, Public, HideBySig
+    FindAllDomainControllers(String): PrivateScope, Public, HideBySig
+    FindAllDiscoverableDomainControllers(): PrivateScope, Public, HideBySig
+    FindAllDiscoverableDomainControllers(String): PrivateScope, Public, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetAllTrustRelationships(): PrivateScope, Public, HideBySig
+    GetTrustRelationship(String): PrivateScope, Public, HideBySig
+    GetSelectiveAuthenticationStatus(String): PrivateScope, Public, HideBySig
+    SetSelectiveAuthenticationStatus(String, Boolean): PrivateScope, Public, HideBySig
+    GetSidFilteringStatus(String): PrivateScope, Public, HideBySig
+    SetSidFilteringStatus(String, Boolean): PrivateScope, Public, HideBySig
+    DeleteLocalSideOfTrustRelationship(String): PrivateScope, Public, HideBySig
+    DeleteTrustRelationship(Domain): PrivateScope, Public, HideBySig
+    VerifyOutboundTrustRelationship(String): PrivateScope, Public, HideBySig
+    VerifyTrustRelationship(Domain, TrustDirection): PrivateScope, Public, HideBySig
+    CreateLocalSideOfTrustRelationship(String, TrustDirection, String): PrivateScope, Public, HideBySig
+    CreateTrustRelationship(Domain, TrustDirection): PrivateScope, Public, HideBySig
+    UpdateLocalSideOfTrustRelationship(String, String): PrivateScope, Public, HideBySig
+    UpdateLocalSideOfTrustRelationship(String, TrustDirection, String): PrivateScope, Public, HideBySig
+    UpdateTrustRelationship(Domain, TrustDirection): PrivateScope, Public, HideBySig
+    RepairTrustRelationship(Domain): PrivateScope, Public, HideBySig
+    GetCurrentDomain(): PrivateScope, Public, Static, HideBySig
+    get_Forest(): PrivateScope, Public, HideBySig, SpecialName
+    get_DomainControllers(): PrivateScope, Public, HideBySig, SpecialName
+    get_Children(): PrivateScope, Public, HideBySig, SpecialName
+    get_DomainMode(): PrivateScope, Public, HideBySig, SpecialName
+    get_DomainModeLevel(): PrivateScope, Public, HideBySig, SpecialName
+    get_Parent(): PrivateScope, Public, HideBySig, SpecialName
+    get_PdcRoleOwner(): PrivateScope, Public, HideBySig, SpecialName
+    get_RidRoleOwner(): PrivateScope, Public, HideBySig, SpecialName
+    get_InfrastructureRoleOwner(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.DomainCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.Domain Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(Domain): PrivateScope, Public, HideBySig
+    IndexOf(Domain): PrivateScope, Public, HideBySig
+    CopyTo(Domain[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions AbortIfServerUnavailable = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions SyncAdjacentServerOnly = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions CheckServerAlivenessOnly = 8 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions SkipInitialCheck = 16 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions PushChangeOutward = 32 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersOptions CrossSite = 64 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent Error = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent SyncStarted = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent SyncCompleted = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersEvent Finished = 3 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorCategory: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorCategory ErrorContactingServer = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorCategory ErrorReplicating = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorCategory ServerUnreachable = 2 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.SyncUpdateCallback: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Invoke(SyncFromAllServersEvent, String, String, SyncFromAllServersOperationException): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    BeginInvoke(SyncFromAllServersEvent, String, String, SyncFromAllServersOperationException, AsyncCallback, Object): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class System.DirectoryServices.ActiveDirectory.DomainController: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.DirectoryServer
+  Properties:
+    System.DirectoryServices.ActiveDirectory.Forest Forest 'get ' : 
+    System.DateTime CurrentTime 'get ' : 
+    Int64 HighestCommittedUsn 'get ' : 
+    System.String OSVersion 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryRoleCollection Roles 'get ' : 
+    System.DirectoryServices.ActiveDirectory.Domain Domain 'get ' : 
+    System.String IPAddress 'get ' : 
+    System.String SiteName 'get ' : 
+    System.DirectoryServices.ActiveDirectory.SyncUpdateCallback SyncFromAllServersCallback 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection InboundConnections 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection OutboundConnections 'get ' : 
+  Methods:
+    GetDomainController(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext, LocatorOptions): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext, String, LocatorOptions): PrivateScope, Public, Static, HideBySig
+    FindAll(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindAll(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    EnableGlobalCatalog(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, HasSecurity
+    IsGlobalCatalog(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, HasSecurity
+    TransferRoleOwnership(ActiveDirectoryRole): PrivateScope, Public, HideBySig
+    SeizeRoleOwnership(ActiveDirectoryRole): PrivateScope, Public, HideBySig
+    GetDirectorySearcher(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, HasSecurity
+    CheckReplicationConsistency(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationCursors(String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationOperationInformation(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationNeighbors(String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetAllReplicationNeighbors(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationConnectionFailures(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    GetReplicationMetadata(String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    SyncReplicaFromServer(String, String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    TriggerSyncReplicaFromNeighbors(String): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    SyncReplicaFromAllServers(String, SyncFromAllServersOptions): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    get_Forest(): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_HighestCommittedUsn(): PrivateScope, Public, HideBySig, SpecialName
+    get_OSVersion(): PrivateScope, Public, HideBySig, SpecialName
+    get_Roles(): PrivateScope, Public, HideBySig, SpecialName
+    get_Domain(): PrivateScope, Public, HideBySig, SpecialName
+    get_IPAddress(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    get_SiteName(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    get_SyncFromAllServersCallback(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    set_SyncFromAllServersCallback(SyncUpdateCallback): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    get_InboundConnections(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+    get_OutboundConnections(): PrivateScope, Public, Virtual, HideBySig, SpecialName, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.DomainControllerCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.DomainController Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(DomainController): PrivateScope, Public, HideBySig
+    IndexOf(DomainController): PrivateScope, Public, HideBySig
+    CopyTo(DomainController[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorInformation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorCategory ErrorCategory 'get ' : 
+    Int32 ErrorCode 'get ' : 
+    System.String ErrorMessage 'get ' : 
+    System.String TargetServer 'get ' : 
+    System.String SourceServer 'get ' : 
+  Methods:
+    get_ErrorCategory(): PrivateScope, Public, HideBySig, SpecialName
+    get_ErrorCode(): PrivateScope, Public, HideBySig, SpecialName
+    get_ErrorMessage(): PrivateScope, Public, HideBySig, SpecialName
+    get_TargetServer(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceServer(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String, System.Type, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.Type Type 'get ' : 
+    System.String Name 'get ' : 
+  Methods:
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String, System.Exception, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 ErrorCode 'get ' : 
+  Methods:
+    get_ErrorCode(): PrivateScope, Public, HideBySig, SpecialName
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String, System.Exception, Int32, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, Int32, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 ErrorCode 'get ' : 
+    System.String Name 'get ' : 
+    System.String Message 'get ' : 
+  Methods:
+    get_ErrorCode(): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Message(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException
+    Void .ctor(System.String, System.Exception, System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorInformation[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DirectoryServices.ActiveDirectory.SyncFromAllServersErrorInformation[] ErrorInformation 'get ' : 
+  Methods:
+    get_ErrorInformation(): PrivateScope, Public, HideBySig, SpecialName
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException: AutoLayout, AnsiClass, Class, Public, Serializable, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException
+    Void .ctor(System.String, System.Exception, System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollisionCollection): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String, System.Exception): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollisionCollection Collisions 'get ' : 
+  Methods:
+    get_Collisions(): PrivateScope, Public, HideBySig, SpecialName
+    GetObjectData(SerializationInfo, StreamingContext): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+Struct System.DirectoryServices.ActiveDirectory.ForestMode: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ForestMode Unknown = -1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestMode Windows2000Forest = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestMode Windows2003InterimForest = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestMode Windows2003Forest = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestMode Windows2008Forest = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestMode Windows2008R2Forest = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestMode Windows8Forest = 5 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestMode Windows2012R2Forest = 6 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.Forest: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection Sites 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainCollection Domains 'get ' : 
+    System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection GlobalCatalogs 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ApplicationPartitionCollection ApplicationPartitions 'get ' : 
+    Int32 ForestModeLevel 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ForestMode ForestMode 'get ' : 
+    System.DirectoryServices.ActiveDirectory.Domain RootDomain 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchema Schema 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainController SchemaRoleOwner 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainController NamingRoleOwner 'get ' : 
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    GetForest(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    RaiseForestFunctionalityLevel(Int32): PrivateScope, Public, HideBySig
+    RaiseForestFunctionality(ForestMode): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    FindGlobalCatalog(): PrivateScope, Public, HideBySig
+    FindGlobalCatalog(String): PrivateScope, Public, HideBySig
+    FindGlobalCatalog(LocatorOptions): PrivateScope, Public, HideBySig
+    FindGlobalCatalog(String, LocatorOptions): PrivateScope, Public, HideBySig
+    FindAllGlobalCatalogs(): PrivateScope, Public, HideBySig
+    FindAllGlobalCatalogs(String): PrivateScope, Public, HideBySig
+    FindAllDiscoverableGlobalCatalogs(): PrivateScope, Public, HideBySig
+    FindAllDiscoverableGlobalCatalogs(String): PrivateScope, Public, HideBySig
+    GetAllTrustRelationships(): PrivateScope, Public, HideBySig
+    GetTrustRelationship(String): PrivateScope, Public, HideBySig
+    GetSelectiveAuthenticationStatus(String): PrivateScope, Public, HideBySig
+    SetSelectiveAuthenticationStatus(String, Boolean): PrivateScope, Public, HideBySig
+    GetSidFilteringStatus(String): PrivateScope, Public, HideBySig
+    SetSidFilteringStatus(String, Boolean): PrivateScope, Public, HideBySig
+    DeleteLocalSideOfTrustRelationship(String): PrivateScope, Public, HideBySig
+    DeleteTrustRelationship(Forest): PrivateScope, Public, HideBySig
+    VerifyOutboundTrustRelationship(String): PrivateScope, Public, HideBySig
+    VerifyTrustRelationship(Forest, TrustDirection): PrivateScope, Public, HideBySig
+    CreateLocalSideOfTrustRelationship(String, TrustDirection, String): PrivateScope, Public, HideBySig
+    CreateTrustRelationship(Forest, TrustDirection): PrivateScope, Public, HideBySig
+    UpdateLocalSideOfTrustRelationship(String, String): PrivateScope, Public, HideBySig
+    UpdateLocalSideOfTrustRelationship(String, TrustDirection, String): PrivateScope, Public, HideBySig
+    UpdateTrustRelationship(Forest, TrustDirection): PrivateScope, Public, HideBySig
+    RepairTrustRelationship(Forest): PrivateScope, Public, HideBySig
+    GetCurrentForest(): PrivateScope, Public, Static, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Sites(): PrivateScope, Public, HideBySig, SpecialName
+    get_Domains(): PrivateScope, Public, HideBySig, SpecialName
+    get_GlobalCatalogs(): PrivateScope, Public, HideBySig, SpecialName
+    get_ApplicationPartitions(): PrivateScope, Public, HideBySig, SpecialName
+    get_ForestModeLevel(): PrivateScope, Public, HideBySig, SpecialName
+    get_ForestMode(): PrivateScope, Public, HideBySig, SpecialName
+    get_RootDomain(): PrivateScope, Public, HideBySig, SpecialName
+    get_Schema(): PrivateScope, Public, HideBySig, SpecialName
+    get_SchemaRoleOwner(): PrivateScope, Public, HideBySig, SpecialName
+    get_NamingRoleOwner(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType CollisionType 'get ' : 
+    System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions TopLevelNameCollisionOption 'get ' : 
+    System.DirectoryServices.ActiveDirectory.DomainCollisionOptions DomainCollisionOption 'get ' : 
+    System.String CollisionRecord 'get ' : 
+  Methods:
+    get_CollisionType(): PrivateScope, Public, HideBySig, SpecialName
+    get_TopLevelNameCollisionOption(): PrivateScope, Public, HideBySig, SpecialName
+    get_DomainCollisionOption(): PrivateScope, Public, HideBySig, SpecialName
+    get_CollisionRecord(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollisionCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipCollision Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ForestTrustRelationshipCollision): PrivateScope, Public, HideBySig
+    IndexOf(ForestTrustRelationshipCollision): PrivateScope, Public, HideBySig
+    CopyTo(ForestTrustRelationshipCollision[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ForestTrustDomainInfoCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ForestTrustDomainInformation Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ForestTrustDomainInformation): PrivateScope, Public, HideBySig
+    IndexOf(ForestTrustDomainInformation): PrivateScope, Public, HideBySig
+    CopyTo(ForestTrustDomainInformation[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.ForestTrustDomainStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ForestTrustDomainStatus Enabled = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestTrustDomainStatus SidAdminDisabled = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestTrustDomainStatus SidConflictDisabled = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestTrustDomainStatus NetBiosNameAdminDisabled = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestTrustDomainStatus NetBiosNameConflictDisabled = 8 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.ForestTrustDomainInformation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String DnsName 'get ' : 
+    System.String NetBiosName 'get ' : 
+    System.String DomainSid 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ForestTrustDomainStatus Status 'get set' : 
+  Methods:
+    get_DnsName(): PrivateScope, Public, HideBySig, SpecialName
+    get_NetBiosName(): PrivateScope, Public, HideBySig, SpecialName
+    get_DomainSid(): PrivateScope, Public, HideBySig, SpecialName
+    get_Status(): PrivateScope, Public, HideBySig, SpecialName
+    set_Status(ForestTrustDomainStatus): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ForestTrustRelationshipInformation: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation
+  Properties:
+    System.DirectoryServices.ActiveDirectory.TopLevelNameCollection TopLevelNames 'get ' : 
+    System.Collections.Specialized.StringCollection ExcludedTopLevelNames 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ForestTrustDomainInfoCollection TrustedDomainInformation 'get ' : 
+  Methods:
+    get_TopLevelNames(): PrivateScope, Public, HideBySig, SpecialName
+    get_ExcludedTopLevelNames(): PrivateScope, Public, HideBySig, SpecialName
+    get_TrustedDomainInformation(): PrivateScope, Public, HideBySig, SpecialName
+    Save(): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.GlobalCatalog: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  :System.DirectoryServices.ActiveDirectory.DomainController
+  Methods:
+    GetGlobalCatalog(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext, LocatorOptions): PrivateScope, Public, Static, HideBySig
+    FindOne(DirectoryContext, String, LocatorOptions): PrivateScope, Public, Static, HideBySig
+    FindAll(DirectoryContext): PrivateScope, Public, Static, HideBySig
+    FindAll(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    EnableGlobalCatalog(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    DisableGlobalCatalog(): PrivateScope, Public, HideBySig
+    IsGlobalCatalog(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+    FindAllProperties(): PrivateScope, Public, HideBySig
+    GetDirectorySearcher(): PrivateScope, Public, Virtual, HideBySig, HasSecurity
+Class System.DirectoryServices.ActiveDirectory.GlobalCatalogCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.GlobalCatalog Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(GlobalCatalog): PrivateScope, Public, HideBySig
+    IndexOf(GlobalCatalog): PrivateScope, Public, HideBySig
+    CopyTo(GlobalCatalog[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.LocatorOptions: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int64 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.LocatorOptions ForceRediscovery = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.LocatorOptions KdcRequired = 1024 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.LocatorOptions TimeServerRequired = 2048 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.LocatorOptions WriteableRequired = 4096 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.LocatorOptions AvoidSelf = 16384 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaClassCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaClass Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySchemaClass): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySchemaClass[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReadOnlyActiveDirectorySchemaPropertyCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchemaProperty Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ActiveDirectorySchemaProperty): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySchemaProperty): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySchemaProperty[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReadOnlyDirectoryServerCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.DirectoryServer Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(DirectoryServer): PrivateScope, Public, HideBySig
+    IndexOf(DirectoryServer): PrivateScope, Public, HideBySig
+    CopyTo(DirectoryServer[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReadOnlySiteCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySite Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ActiveDirectorySite): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySite): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySite[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkBridgeCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkBridge Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ActiveDirectorySiteLinkBridge): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySiteLinkBridge): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySiteLinkBridge[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLink Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ActiveDirectorySiteLink): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectorySiteLink): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectorySiteLink[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReadOnlyStringCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.String Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(String): PrivateScope, Public, HideBySig
+    IndexOf(String): PrivateScope, Public, HideBySig
+    CopyTo(String[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.NotificationStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.NotificationStatus NoNotification = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.NotificationStatus IntraSiteOnly = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.NotificationStatus NotificationAlways = 2 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.ReplicationSpan: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ReplicationSpan IntraSite = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ReplicationSpan InterSite = 1 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.ReplicationConnection: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.DirectoryServices.ActiveDirectory.DirectoryServer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.DirectoryServices.ActiveDirectory.DirectoryServer, System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.DirectoryServices.ActiveDirectory.DirectoryServer, System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.DirectoryServices.ActiveDirectory.DirectoryContext, System.String, System.DirectoryServices.ActiveDirectory.DirectoryServer, System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule, System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Name 'get ' : 
+    System.String SourceServer 'get ' : 
+    System.String DestinationServer 'get ' : 
+    Boolean Enabled 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType 'get ' : 
+    Boolean GeneratedByKcc 'get set' : 
+    Boolean ReciprocalReplicationEnabled 'get set' : 
+    System.DirectoryServices.ActiveDirectory.NotificationStatus ChangeNotificationStatus 'get set' : 
+    Boolean DataCompressionEnabled 'get set' : 
+    Boolean ReplicationScheduleOwnedByUser 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationSpan ReplicationSpan 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectorySchedule ReplicationSchedule 'get set' : 
+  Methods:
+    FindByName(DirectoryContext, String): PrivateScope, Public, Static, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceServer(): PrivateScope, Public, HideBySig, SpecialName
+    get_DestinationServer(): PrivateScope, Public, HideBySig, SpecialName
+    get_Enabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_Enabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_TransportType(): PrivateScope, Public, HideBySig, SpecialName
+    get_GeneratedByKcc(): PrivateScope, Public, HideBySig, SpecialName
+    set_GeneratedByKcc(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ReciprocalReplicationEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReciprocalReplicationEnabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ChangeNotificationStatus(): PrivateScope, Public, HideBySig, SpecialName
+    set_ChangeNotificationStatus(NotificationStatus): PrivateScope, Public, HideBySig, SpecialName
+    get_DataCompressionEnabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataCompressionEnabled(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ReplicationScheduleOwnedByUser(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReplicationScheduleOwnedByUser(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_ReplicationSpan(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReplicationSchedule(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReplicationSchedule(ActiveDirectorySchedule): PrivateScope, Public, HideBySig, SpecialName
+    Delete(): PrivateScope, Public, HideBySig
+    Save(): PrivateScope, Public, HideBySig
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReplicationConnectionCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ReplicationConnection Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ReplicationConnection): PrivateScope, Public, HideBySig
+    IndexOf(ReplicationConnection): PrivateScope, Public, HideBySig
+    CopyTo(ReplicationConnection[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReplicationCursor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String PartitionName 'get ' : 
+    System.Guid SourceInvocationId 'get ' : 
+    Int64 UpToDatenessUsn 'get ' : 
+    System.String SourceServer 'get ' : 
+    System.DateTime LastSuccessfulSyncTime 'get ' : 
+  Methods:
+    get_PartitionName(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceInvocationId(): PrivateScope, Public, HideBySig, SpecialName
+    get_UpToDatenessUsn(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceServer(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastSuccessfulSyncTime(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ReplicationCursorCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ReplicationCursor Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ReplicationCursor): PrivateScope, Public, HideBySig
+    IndexOf(ReplicationCursor): PrivateScope, Public, HideBySig
+    CopyTo(ReplicationCursor[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReplicationFailure: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String SourceServer 'get ' : 
+    System.DateTime FirstFailureTime 'get ' : 
+    Int32 ConsecutiveFailureCount 'get ' : 
+    Int32 LastErrorCode 'get ' : 
+    System.String LastErrorMessage 'get ' : 
+  Methods:
+    get_SourceServer(): PrivateScope, Public, HideBySig, SpecialName
+    get_FirstFailureTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_ConsecutiveFailureCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastErrorCode(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastErrorMessage(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ReplicationFailureCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ReplicationFailure Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ReplicationFailure): PrivateScope, Public, HideBySig
+    IndexOf(ReplicationFailure): PrivateScope, Public, HideBySig
+    CopyTo(ReplicationFailure[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType Rpc = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType Smtp = 1 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.ReplicationNeighbor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String PartitionName 'get ' : 
+    System.String SourceServer 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType 'get ' : 
+    ReplicationNeighborOptions ReplicationNeighborOption 'get ' : 
+    System.Guid SourceInvocationId 'get ' : 
+    Int64 UsnLastObjectChangeSynced 'get ' : 
+    Int64 UsnAttributeFilter 'get ' : 
+    System.DateTime LastSuccessfulSync 'get ' : 
+    System.DateTime LastAttemptedSync 'get ' : 
+    Int32 LastSyncResult 'get ' : 
+    System.String LastSyncMessage 'get ' : 
+    Int32 ConsecutiveFailureCount 'get ' : 
+  Methods:
+    get_PartitionName(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceServer(): PrivateScope, Public, HideBySig, SpecialName
+    get_TransportType(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReplicationNeighborOption(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceInvocationId(): PrivateScope, Public, HideBySig, SpecialName
+    get_UsnLastObjectChangeSynced(): PrivateScope, Public, HideBySig, SpecialName
+    get_UsnAttributeFilter(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastSuccessfulSync(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastAttemptedSync(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastSyncResult(): PrivateScope, Public, HideBySig, SpecialName
+    get_LastSyncMessage(): PrivateScope, Public, HideBySig, SpecialName
+    get_ConsecutiveFailureCount(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ReplicationNeighborCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ReplicationNeighbor Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ReplicationNeighbor): PrivateScope, Public, HideBySig
+    IndexOf(ReplicationNeighbor): PrivateScope, Public, HideBySig
+    CopyTo(ReplicationNeighbor[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReplicationOperation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.DateTime TimeEnqueued 'get ' : 
+    Int32 OperationNumber 'get ' : 
+    Int32 Priority 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationOperationType OperationType 'get ' : 
+    System.String PartitionName 'get ' : 
+    System.String SourceServer 'get ' : 
+  Methods:
+    get_TimeEnqueued(): PrivateScope, Public, HideBySig, SpecialName
+    get_OperationNumber(): PrivateScope, Public, HideBySig, SpecialName
+    get_Priority(): PrivateScope, Public, HideBySig, SpecialName
+    get_OperationType(): PrivateScope, Public, HideBySig, SpecialName
+    get_PartitionName(): PrivateScope, Public, HideBySig, SpecialName
+    get_SourceServer(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ReplicationOperationCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ReplicationOperation Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ReplicationOperation): PrivateScope, Public, HideBySig
+    IndexOf(ReplicationOperation): PrivateScope, Public, HideBySig
+    CopyTo(ReplicationOperation[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.ReplicationOperationInformation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime OperationStartTime 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationOperation CurrentOperation 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReplicationOperationCollection PendingOperations 'get ' : 
+  Methods:
+    get_OperationStartTime(): PrivateScope, Public, HideBySig, SpecialName
+    get_CurrentOperation(): PrivateScope, Public, HideBySig, SpecialName
+    get_PendingOperations(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectoryInterSiteTransport: AutoLayout, AnsiClass, Class, Public, HasSecurity, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryTransportType TransportType 'get ' : 
+    Boolean IgnoreReplicationSchedule 'get set' : 
+    Boolean BridgeAllSiteLinks 'get set' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkCollection SiteLinks 'get ' : 
+    System.DirectoryServices.ActiveDirectory.ReadOnlySiteLinkBridgeCollection SiteLinkBridges 'get ' : 
+  Methods:
+    FindByTransportType(DirectoryContext, ActiveDirectoryTransportType): PrivateScope, Public, Static, HideBySig
+    get_TransportType(): PrivateScope, Public, HideBySig, SpecialName
+    get_IgnoreReplicationSchedule(): PrivateScope, Public, HideBySig, SpecialName
+    set_IgnoreReplicationSchedule(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_BridgeAllSiteLinks(): PrivateScope, Public, HideBySig, SpecialName
+    set_BridgeAllSiteLinks(Boolean): PrivateScope, Public, HideBySig, SpecialName
+    get_SiteLinks(): PrivateScope, Public, HideBySig, SpecialName
+    get_SiteLinkBridges(): PrivateScope, Public, HideBySig, SpecialName
+    Save(): PrivateScope, Public, HideBySig
+    GetDirectoryEntry(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig, VtableLayoutMask
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole SchemaRole = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole NamingRole = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole PdcRole = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole RidRole = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole InfrastructureRole = 4 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.AdamRole: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.AdamRole SchemaRole = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.AdamRole NamingRole = 1 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.ActiveDirectoryRoleCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.ActiveDirectoryRole Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(ActiveDirectoryRole): PrivateScope, Public, HideBySig
+    IndexOf(ActiveDirectoryRole): PrivateScope, Public, HideBySig
+    CopyTo(ActiveDirectoryRole[], Int32): PrivateScope, Public, HideBySig
+Class System.DirectoryServices.ActiveDirectory.AdamRoleCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.AdamRole Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(AdamRole): PrivateScope, Public, HideBySig
+    IndexOf(AdamRole): PrivateScope, Public, HideBySig
+    CopyTo(AdamRole[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel MutualAuthentication = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel Negotiate = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ReplicationSecurityLevel NegotiatePassThrough = 0 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.TopLevelNameStatus: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.TopLevelNameStatus Enabled = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TopLevelNameStatus NewlyCreated = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TopLevelNameStatus AdminDisabled = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TopLevelNameStatus ConflictDisabled = 4 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.TopLevelName: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String Name 'get ' : 
+    System.DirectoryServices.ActiveDirectory.TopLevelNameStatus Status 'get set' : 
+  Methods:
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    get_Status(): PrivateScope, Public, HideBySig, SpecialName
+    set_Status(TopLevelNameStatus): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.TopLevelNameCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.TopLevelName Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(TopLevelName): PrivateScope, Public, HideBySig
+    IndexOf(TopLevelName): PrivateScope, Public, HideBySig
+    CopyTo(TopLevelName[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.TrustType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.TrustType TreeRoot = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TrustType ParentChild = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TrustType CrossLink = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TrustType External = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TrustType Forest = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TrustType Kerberos = 5 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TrustType Unknown = 6 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.TrustDirection: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.TrustDirection Inbound = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TrustDirection Outbound = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TrustDirection Bidirectional = 3 : Public, Static, Literal, HasDefault
+Class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Properties:
+    System.String SourceName 'get ' : 
+    System.String TargetName 'get ' : 
+    System.DirectoryServices.ActiveDirectory.TrustType TrustType 'get ' : 
+    System.DirectoryServices.ActiveDirectory.TrustDirection TrustDirection 'get ' : 
+  Methods:
+    get_SourceName(): PrivateScope, Public, HideBySig, SpecialName
+    get_TargetName(): PrivateScope, Public, HideBySig, SpecialName
+    get_TrustType(): PrivateScope, Public, HideBySig, SpecialName
+    get_TrustDirection(): PrivateScope, Public, HideBySig, SpecialName
+Class System.DirectoryServices.ActiveDirectory.TrustRelationshipInformationCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Collections.ReadOnlyCollectionBase
+  Properties:
+    System.DirectoryServices.ActiveDirectory.TrustRelationshipInformation Item [Int32] 'get ' : 
+  Methods:
+    get_Item(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Contains(TrustRelationshipInformation): PrivateScope, Public, HideBySig
+    IndexOf(TrustRelationshipInformation): PrivateScope, Public, HideBySig
+    CopyTo(TrustRelationshipInformation[], Int32): PrivateScope, Public, HideBySig
+Struct System.DirectoryServices.ActiveDirectory.ReplicationOperationType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ReplicationOperationType Sync = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ReplicationOperationType Add = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ReplicationOperationType Delete = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ReplicationOperationType Modify = 3 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ReplicationOperationType UpdateReference = 4 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType TopLevelName = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType Domain = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.ForestTrustCollisionType Other = 2 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions NewlyCreated = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions DisabledByAdmin = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.TopLevelNameCollisionOptions DisabledByConflict = 4 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.DomainCollisionOptions: AutoLayout, AnsiClass, Class, Public, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    System.DirectoryServices.ActiveDirectory.DomainCollisionOptions None = 0 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainCollisionOptions SidDisabledByAdmin = 1 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainCollisionOptions SidDisabledByConflict = 2 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainCollisionOptions NetBiosNameDisabledByAdmin = 4 : Public, Static, Literal, HasDefault
+    System.DirectoryServices.ActiveDirectory.DomainCollisionOptions NetBiosNameDisabledByConflict = 8 : Public, Static, Literal, HasDefault
+Struct System.DirectoryServices.ActiveDirectory.ReplicationNeighbor+ReplicationNeighborOptions: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int64 value__ : Public, SpecialName, RTSpecialName
+    ReplicationNeighborOptions Writeable = 16 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions SyncOnStartup = 32 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions ScheduledSync = 64 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions UseInterSiteTransport = 128 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions TwoWaySync = 512 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions ReturnObjectParent = 2048 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions FullSyncInProgress = 65536 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions FullSyncNextPacket = 131072 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions NeverSynced = 2097152 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions Preempted = 16777216 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions IgnoreChangeNotifications = 67108864 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions DisableScheduledSync = 134217728 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions CompressChanges = 268435456 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions NoChangeNotifications = 536870912 : Public, Static, Literal, HasDefault
+    ReplicationNeighborOptions PartialAttributeSet = 1073741824 : Public, Static, Literal, HasDefault

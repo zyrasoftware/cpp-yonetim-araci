@@ -1,0 +1,6 @@
+C:\Users\REVA\Desktop\File-Management-Windows-Application-master\File Management Tool\x64\Debug\File Management Tool.vcxproj.AssemblyReference.cache
+C:\Users\REVA\Desktop\File-Management-Windows-Application-master\File Management Tool\x64\Debug\FileManagementTool.MainForm.resources
+C:\Users\REVA\Desktop\File-Management-Windows-Application-master\File Management Tool\x64\Debug\File Management Tool.vcxproj.GenerateResource.cache
+C:\Users\REVA\Desktop\Emir Köksal\File-Management-Windows-Application-master\File Management Tool\x64\Debug\File Management Tool.vcxproj.AssemblyReference.cache
+C:\Users\REVA\Desktop\Emir Köksal\File-Management-Windows-Application-master\File Management Tool\x64\Debug\FileManagementTool.MainForm.resources
+C:\Users\REVA\Desktop\Emir Köksal\File-Management-Windows-Application-master\File Management Tool\x64\Debug\File Management Tool.vcxproj.GenerateResource.cache
